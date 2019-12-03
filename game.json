@@ -1,0 +1,162 @@
+{
+    "verbs": [
+        {
+            "v": "exits",
+            "key": "exits"
+        },
+        {
+            "v": "N",
+            "key": "NORTH"
+        },
+        {   "v": "n",
+            "key": "NORTH"
+        },
+        {
+            "v": "NORTH",
+            "key": "NORTH"
+        },
+        {
+            "v": "S",
+            "key": "SOUTH"
+        },
+        {   "v": "s",
+            "key": "SOUTH"
+        },
+        {
+            "v": "SOUTH",
+            "key": "NORTH"
+        },
+        {
+            "v": "E",
+            "key": "EAST"
+        },
+        {   "v": "e",
+            "key": "EAST"
+        },
+        {
+            "v": "EAST",
+            "key": "EAST"
+        },
+        {
+            "v": "W",
+            "key": "WEST"
+        },
+        {   "v": "w",
+            "key": "WEST"
+        },
+        {
+            "v": "WEST",
+            "key": "WEST"
+        }
+    ],
+    "rooms": {
+        "NHOUS": {
+            "name": "North of the House",
+            "desc": "",
+            "exits": [
+                {
+                    "verb": "NORTH",
+                    "target": "NoExit",
+                    "Condition": ""
+                },
+                {
+                    "verb": "SOUTH",
+                    "target": "NoExit",
+                    "Condition": ""
+                },
+                {
+                    "verb": "EAST",
+                    "target": "NoExit",
+                    "Condition": ""
+                },
+                {
+                    "verb": "WEST",
+                    "target": "NoExit",
+                    "Condition": ""
+                }
+            ],
+            "inventory": []
+        },
+        "SHOUS": {
+            "name": "South of the House",
+            "desc": "",
+            "exits": [
+                {
+                    "verb": "NORTH",
+                    "target": "NoExit",
+                    "Condition": ""
+                },
+                {
+                    "verb": "SOUTH",
+                    "target": "NoExit",
+                    "Condition": ""
+                },
+                {
+                    "verb": "EAST",
+                    "target": "NoExit",
+                    "Condition": ""
+                },
+                {
+                    "verb": "WEST",
+                    "target": "NoExit",
+                    "Condition": ""
+                }
+            ],
+            "inventory": []
+        },
+        "EHOUS": {
+            "name": "East of the House",
+            "desc": "",
+            "exits": [
+                {
+                    "verb": "NORTH",
+                    "target": "NoExit",
+                    "Condition": ""
+                },
+                {
+                    "verb": "SOUTH",
+                    "target": "NoExit",
+                    "Condition": ""
+                },
+                {
+                    "verb": "EAST",
+                    "target": "NoExit",
+                    "Condition": ""
+                },
+                {
+                    "verb": "WEST",
+                    "target": "NoExit",
+                    "Condition": ""
+                }
+            ],
+            "inventory": []
+        },
+        "WHOUS": {
+            "name": "West of the House",
+            "desc": "",
+            "exits": [
+                {
+                    "verb": "NORTH",
+                    "target": "NoExit",
+                    "Condition": ""
+                },
+                {
+                    "verb": "SOUTH",
+                    "target": "NoExit",
+                    "Condition": ""
+                },
+                {
+                    "verb": "EAST",
+                    "target": "NoExit",
+                    "Condition": ""
+                },
+                {
+                    "verb": "WEST",
+                    "target": "NoExit",
+                    "Condition": ""
+                }
+            ],
+            "inventory": []
+        }
+    }
+}
