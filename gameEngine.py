@@ -84,7 +84,7 @@ def main():
     with open(gameFile) as json_file:
         game = json.load(json_file)
 
-    current = 'NHOUS'
+    current = 'WBUILD'
     win = ['END']
     lose = []
     moves = 0
