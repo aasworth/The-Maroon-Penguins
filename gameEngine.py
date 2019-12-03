@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import sys, logging, os, json
+from tkinter import *
 
 version = (3,7)
 assert sys.version_info >= version, "This script requires at least Python {0}.{1}".format(version[0],version[1])
@@ -16,7 +17,13 @@ def render(game,current,moves,points):
     ''' Displays the current room, moves, and points '''
     r = game['rooms']
     c = r[current]
-
+    if c['name'] == "You are west of the remnants a large building.":
+        root = Tk()
+        canvas = Canvas(root, width = 300, height = 300)
+        canvas.pack()
+        img = PhotoImage(file="heart.png")
+        canvas.create_image(20,20, anchor = NW, image=img)
+        mainloop()
     print('\n\nMoves: {moves}, Points: {points}'.format(moves=moves, points=points))
     print('\n {name}'.format(name=c['name']))
     print(c['desc'])
