@@ -19,19 +19,19 @@ def render(game,current,moves,points):
     c = r[current]
     scale_w = 900/2700
     scale_h = 600/1800
-    if c['name'] == "You are west of the remnants a large building.":
+    if c['name'] == "You are walking around the central pavillion of Wonder World, trying to find an exit.":
         root = Tk()
-        canvas = Canvas(root, width = 300, height = 300)
+        canvas = Canvas(root, width = 900, height = 600)
         canvas.pack()
-        img = PhotoImage(file="heart.png")
+        img = PhotoImage(file="Marie.png")
         canvas.create_image(20,20, anchor = NW, image=img)
         mainloop()
     else:
         root = Tk()
-        canvas = Canvas(root, width = 2700, height = 1800)
+        canvas = Canvas(root, width = 900, height = 600)
         canvas.pack()
         img = PhotoImage(file="The_park.png")
-        canvas.create_image(0,0, anchor = NW, image=img)
+        canvas.create_image(20,10, anchor = NW, image=img)
         mainloop()
     print('\n\nMoves: {moves}, Points: {points}'.format(moves=moves, points=points))
     print('\n {name}'.format(name=c['name']))
@@ -100,7 +100,7 @@ def main():
     with open(gameFile) as json_file:
         game = json.load(json_file)
 
-    current = 'WBUILD'
+    current = 'MARIE'
     win = ['END']
     lose = []
     moves = 0
