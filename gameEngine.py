@@ -17,12 +17,21 @@ def render(game,current,moves,points):
     ''' Displays the current room, moves, and points '''
     r = game['rooms']
     c = r[current]
+    scale_w = 900/2700
+    scale_h = 600/1800
     if c['name'] == "You are west of the remnants a large building.":
         root = Tk()
         canvas = Canvas(root, width = 300, height = 300)
         canvas.pack()
         img = PhotoImage(file="heart.png")
         canvas.create_image(20,20, anchor = NW, image=img)
+        mainloop()
+    else:
+        root = Tk()
+        canvas = Canvas(root, width = 2700, height = 1800)
+        canvas.pack()
+        img = PhotoImage(file="The_park.png")
+        canvas.create_image(0,0, anchor = NW, image=img)
         mainloop()
     print('\n\nMoves: {moves}, Points: {points}'.format(moves=moves, points=points))
     print('\n {name}'.format(name=c['name']))
