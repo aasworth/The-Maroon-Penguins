@@ -78,9 +78,9 @@
       }
     ],
     "rooms": {
-      "WBUILD": {
-        "name": "You are west of the remnants a large building.",
-        "desc": "This building must have been destroyed in the war...You look around and see office chairs, filing cabinets, \r\ndesks, and other general supplies. This must have been a factory or office building...\n\nThe war of 2078 was the largest war in history, A nuclear war destroying half \r\nof the world. You are one of few survivors making it in this world, doing whatever you can to survive...",
+      "MARIE": {
+        "name": "You are walking around the central pavillion of Wonder World, trying to find an exit.",
+        "desc": "The gates where you came in the park are nowhere in sight, something is seems off as no one else is outside walking around. You decide to find where everyone went\r\nand you see a Nun locking up gates that go inward toward more of the rides. You approach the gates and she calls out\r\r\r\nYou should leave we don't have anymore room for anyone else, unless you have a skill we can use you best take your chances outside the park.",
         "exits": [
           {
             "verb": "NORTH",
@@ -105,9 +105,9 @@
         ],
         "inventory": []
       },
-      "NBUILD": {
-        "name": "You are north of the remnants of a large building.",
-        "desc": "You are now looking at the north side of the building. over the horizon you see the ruined cityscape \r\nof New York City. ",
+      "JIM": {
+        "name": "You are walking from the gates deeper into the park",
+        "desc": "You see all of the rollercoasters have stopped and the sky is an even brighter orange color. You look further down the path you are on to see man seemlingly looting the gift shops in the park.\r\n You try to pass by him w/o him noticing as he looks quite strange but he turns around and says:\r\r\r\nWould you mind giving me a hand? Were not going to have much time  ",
         "exits": [
           {
             "verb": "NORTH",
