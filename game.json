@@ -83,22 +83,22 @@
         "desc": "The gates where you came in the park are nowhere in sight, something is seems off as no one else is outside walking around. You decide to find where everyone went\r\nand you see a Nun locking up gates that go inward toward more of the rides. You approach the gates and she calls out\r\r\r\nYou should leave we don't have anymore room for anyone else, unless you have a skill we can use you best take your chances outside the park.",
         "exits": [
           {
-            "verb": "NORTH",
-            "target": "NBUILD",
+            "verb": "FORWARD",
+            "target": "JIM",
             "condition": ""
           },
           {
-            "verb": "SOUTH",
+            "verb": "",
             "target": "SBUILD",
             "condition": ""
           },
           {
-            "verb": "WEST",
+            "verb": "",
             "target": "GAS",
             "condition": ""
           },
           {
-            "verb": "EAST",
+            "verb": "",
             "target": "EBUILD",
             "condition": ""
           }
@@ -107,350 +107,57 @@
       },
       "JIM": {
         "name": "You are walking from the gates deeper into the park",
-        "desc": "You see all of the rollercoasters have stopped and the sky is an even brighter orange color. You look further down the path you are on to see man seemlingly looting the gift shops in the park.\r\n You try to pass by him w/o him noticing as he looks quite strange but he turns around and says:\r\r\r\nWould you mind giving me a hand? Were not going to have much time  ",
+        "desc": "You see all of the rollercoasters have stopped and the sky is an even brighter orange color. You look further down the path you are on to see man seemlingly looting the gift shops in the park.\r\n You try to pass by him w/o him noticing as he looks quite strange but he turns around and says:\r\r\r\nWould you mind giving me a hand? Were not going to have much time before it's not safe up here.",
         "exits": [
           {
-            "verb": "NORTH",
-            "target": "SCITY",
+            "verb": "FORWARD",
+            "target": "VICKIE",
             "condition": ""
           },
           {
-            "verb": "WEST",
+            "verb": "",
             "target": "WBUILD",
             "condition": ""
           },
           {
-            "verb": "SOUTH",
+            "verb": "",
             "target": "SBUILD",
             "condition": ""
           },
           {
-            "verb": "EAST",
+            "verb": "",
             "target": "EBUILD",
             "condition": ""
           }
         ],
         "inventory": []
       },
-      "SBUILD": {
-        "name": "You are south of the remnants of a large building.",
-        "desc": "You are now looking at the south side of the building. You can see an entrance to a subway further south, or a bridge leading over the Hudson to the east",
+      "VICKIE": {
+        "name": "You continue down the path toward the back of park.",
+        "desc": "Making your way toward the ferris wheel you see a girl outside of it looking to be setting up a garden right outside of the ferris wheel.\r\n She is wearing a name tag so it seems she works at the park or at least used to. You notice that the ferris wheel seems to have some vines and plants growing in it, like it hasn't been started in years. You walk up to the stairs og the ferris wheel when Vickie calls out to you: \r\r\r\n HEY! That attraction is out of order don't even think about starting it up. ",
         "exits": [
           {
-            "verb": "SOUTH",
-            "target": "SUBWAY",
+            "verb": "FORWARD",
+            "target": "MORT",
             "condition": ""
           },
           {
-            "verb": "EAST",
+            "verb": "",
             "target": "BRIDGE",
             "condition": ""
           }
         ],
         "inventory": []
       },
-      "EBUILD": {
-        "name": "You are east of the remnants of a large building.",
-        "desc": "You are now looking at the east side of the building. the majority of the building on this side is still\r\n standing and you can decipher some graphics on the side of the building... it says \n\n     'Amazon - The World's Leader in Everything!'     \n\nBehind you there is a large cliff dropoff, making no exits except back where you came from.",
+      "MORT": {
+        "name": "You convince Vickie to let you use the ferris wheel, but she leaves and goes back to the park",
+        "desc": "You realize you need someone to start and stop the machiene for you. Luckily you see a guy lurking on the back of the wheel mumbling to himself. You ask him if he can operate the wheel to he responds:\r\r\r\n What do you think your going to see up there?",
         "exits": [
           {
-            "verb": "WEST",
+            "verb": "FORWARD",
             "target": "WBUILD",
             "condition": ""
           }
         ],
         "inventory": []
-      },
-      "GAS": {
-        "name": "You are at a gas station down the street.",
-        "desc": "You walk down the street for about a mile until you end up at a gas station. There are broken down gas pumps, \r\na few charred and rusty cars and the building is collapsing in, and the windows are all shattered.",
-        "exits": [
-          {
-            "verb": "INSIDE",
-            "target": "GINSIDE",
-            "condition": ""
-          },
-          {
-            "verb": "CARS",
-            "target": "GCARS",
-            "condition": ""
-          },
-          {
-            "verb": "EAST",
-            "target": "WBUILD",
-            "condition": ""
-          }
-        ],
-        "inventory": []
-      },
-      "SCITY": {
-        "name": "You are now in the south part of the city.",
-        "desc": "You walk for a few miles from the building until you reach some suburbs in the southern part of the City.",
-        "exits": [
-          {
-            "verb": "EAST",
-            "target": "NoExit",
-            "condition": ""
-          }
-        ],
-        "inventory": []
-      },
-      "MCITY": {
-        "name": "You are now in the main part of the city.",
-        "desc": "",
-        "exits": [
-          {
-            "verb": "EAST",
-            "target": "NoExit",
-            "condition": ""
-          }
-        ],
-        "inventory": []
-      },
-      "ECITY": {
-        "name": "You are now in the east part of the city.",
-        "desc": "",
-        "exits": [
-          {
-            "verb": "EAST",
-            "target": "NoExit",
-            "condition": ""
-          }
-        ],
-        "inventory": []
-      },
-      "WCITY": {
-        "name": "You are now in the west part of the city.",
-        "desc": "",
-        "exits": [
-          {
-            "verb": "EAST",
-            "target": "NoExit",
-            "condition": ""
-          }
-        ],
-        "inventory": []
-      },
-      "NCITY": {
-        "name": "You are now in the north part of the city.",
-        "desc": "",
-        "exits": [
-          {
-            "verb": "EAST",
-            "target": "NoExit",
-            "condition": ""
-          }
-        ],
-        "inventory": []
-      },
-      "SUBWAY": {
-        "name": "You are now in the Subway of New York City.",
-        "desc": "You walk down the steps leading into the subway. Newspapers are everywhere, and you see tattered clothes laying around where it looks like \r\nsomeone has been sleeping. You don't see anyone around, but a stray dog sees you, barks, and runs off down the subway. The tracks seem to be clear in both directions...",
-        "exits": [
-          {
-            "verb": "EAST",
-            "target": "ESUBWAY",
-            "condition": ""
-          },
-          {
-            "verb": "WEST",
-            "target": "WSUBWAY",
-            "condition": ""
-          },
-          {
-            "verb": "NORTH",
-            "target": "SBUILD",
-            "condition": ""
-          }
-        ],
-        "inventory": []
-      },
-      "ESUBWAY": {
-        "name": "You are on the train tracks of the subway.",
-        "desc": "You decide to jump down onto the tracks in the subway station and look towards the east. You see a worn down sign \r\nand think you can make out 'Brooklyn'",
-        "exits": [
-          {
-            "verb": "EAST",
-            "target": "BROOKLYNS",
-            "condition": ""
-          },
-          {
-            "verb": "WEST",
-            "target": "SUBWAY",
-            "condition": ""
-          }
-        ],
-        "inventory": []
-      },
-      "BROOKLYNS": {
-        "name": "You are now in a brooklyn subway station.",
-        "desc": "",
-        "exits": [
-          {
-            "verb": "NORTH",
-            "target": "MBROOKLYN",
-            "condition": ""
-          },
-          {
-            "verb": "WEST",
-            "target": "ESUBWAY",
-            "condition": ""
-          },
-          {
-            "verb": "EAST",
-            "target": "STATENISLANDS",
-            "condition": ""
-          }
-        ],
-        "inventory": []
-      },
-      "MBROOKLYN": {
-        "name": "You are now outside in the center of Brooklyn.",
-        "desc": "",
-        "exits": [
-          {
-            "verb": "EAST",
-            "target": "NoExit",
-            "condition": ""
-          }
-        ]
-      },
-      "STATENISLANDS": {
-        "name": "You are now in a Staten Island subway station.",
-        "desc": "Inside the subway station you look around and see that there is a ton of school desks blocking the stairs up to the street. \r\nThere is no exit, except for how you came here.",
-        "exits": [
-          {
-            "verb": "UP",
-            "target": "NoExit",
-            "condition": ""
-          },
-          {
-            "verb": "WEST",
-            "target": "BROOKLYNS",
-            "condition": ""
-          }
-        ]
-      },
-      "WSUBWAY": {
-        "name": "You are on the train tracks of the subway.",
-        "desc": "You decide to jump down onto the tracks in the subway station and look towards the east. You see a worn down sign \r\nand think you can make out 'Hempstead'",
-        "exits": [
-          {
-            "verb": "WEST",
-            "target": "HEMPSTEADS",
-            "condition": ""
-          },
-          {
-            "verb": "EAST",
-            "target": "SUBWAY",
-            "condition": ""
-          }
-        ],
-        "inventory": []
-      },
-      "HEMPSTEADS": {
-        "name": "You are now in a Hempstead subway station.",
-        "desc": "Inside the subway station you look around and see that there is a ton of school desks blocking the stairs up to the street. \r\nThere is no exit, except for how you came here.",
-        "exits": [
-          {
-            "verb": "UP",
-            "target": "NoExit",
-            "condition": ""
-          },
-          {
-            "verb": "EAST",
-            "target": "WSUBWAY",
-            "condition": ""
-          }
-        ],
-        "inventory": []
-      },
-      "BRIDGE": {
-        "name": "You are now on the bridge over the Hudson.",
-        "desc": "You walk to the bridge, and when you reach the peak of the curve, you look down and see a blockade at the bottom. \r\nIt looks like a group of people have made a blockade to try to trap people and steal all of their belongings. You decide to play it safe and turn around and go back.",
-        "exits": [
-          {
-            "verb": "WEST",
-            "target": "SBUILD",
-            "condition": ""
-          }
-        ],
-        "inventory": ["Empty cans", "Newspapers", "Bones"]
-      },
-      "GINSIDE": {
-        "name": "You are now inside of the gas station.",
-        "desc": "You walk over and pull down a piece of cardboard that is hanging off of the door, and walk inside. The place is a disaster, \r\nand it looks like it has already been ransacked. Some rats scurry around at your feet, and even though you are disgusted, you start to look for anything useful to you.",
-        "exits": [
-          {
-            "verb": "WEST",
-            "target": "GAS",
-            "condition":""
-          },
-          {
-            "verb": "DOWN",
-            "target": "GCELLAR",
-            "condition": ""
-          }
-        ],
-        "inventory": ["Bag of chips","$7.50","Cigarettes","Toilet Paper","Water Bottles"]
-      },
-      "GCARS": {
-        "name": "You are around the cars in the gas station.",
-        "desc": "You walk over to the destroyed cars and search around, trying to see if you can find anything useful.",
-        "exits": [
-          {
-            "verb": "EAST",
-            "target": "GAS",
-            "condition": ""
-          }
-        ],
-        "inventory": ["Lighter","Tissues","Jerry Can","$5","Pack of Cigarettes"]
-      },
-      "GCELLAR": {
-        "name": "You are now in the cellar of the gas station. It is kind of dark in here, but you think you can see a chest sitting in the corner of the room...",
-        "desc": "",
-        "exits": [
-          {
-            "verb": "NORTH",
-            "target": "GCRATS",
-            "condition": ""
-          },
-          {
-            "verb": "UP",
-            "target": "GINSIDE",
-            "condition": ""
-          }
-        ],
-        "inventory": []
-      },
-      "GCRATS": {
-        "name": "Woah!",
-        "desc": "As you are walking towards the chest, you step on something and you hear it squeal! A large rat goes running away into the darkness. \r\nYou can keep going towards the chest, or decide it's too scary and turn around to go back.",
-        "exits": [
-          {
-            "verb": "NORTH",
-            "target": "GCHEST",
-            "condition": ""
-          },
-          {
-            "verb": "SOUTH",
-            "target": "GCELLAR",
-            "condition": ""
-          }
-        ],
-        "inventory": []
-      },
-      "GCHEST": {
-        "name": "You open the chest in the corner of the cellar.",
-        "desc": "TREASURE! Inside the chest you find items that will help you survive so much!",
-        "exits": [
-          {
-            "verb": "SOUTH",
-            "target": "GCELLAR",
-            "condition": ""
-          }
-        ],
-        "inventory": ["3 cans of ravioli","5 water bottles","bottle of advil","$25","Dog Treats","Newspaper from before the war"]
-      }
-    }
-  }
+    
