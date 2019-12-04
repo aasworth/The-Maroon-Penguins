@@ -9,149 +9,210 @@
         "map": "QUIT"
       },
       {
-        "v": "NORTH",
-        "map": "NORTH"
-      },
-      {
-        "v": "N",
-        "map": "NORTH"
-      },
-      {
-        "v": "SOUTH",
-        "map": "SOUTH"
-      },
-      {
-        "v": "S",
-        "map": "SOUTH"
-      },
-      {
-        "v": "EAST",
-        "map": "EAST"
-      },
-      {
-        "v": "E",
-        "map": "EAST"
-      },
-      {
-        "v": "WEST",
-        "map": "WEST"
-      },
-      {
-        "v": "W",
-        "map": "WEST"
-      },
-      {
-        "v": "CARS",
-        "map": "CARS"
-      },
-      {
-        "v": "INSIDE",
-        "map": "INSIDE"
-      },
-      {
-        "v": "I",
-        "map": "INSIDE"
-      },
-      {
-        "v": "DOWN",
-        "map": "DOWN"
-      },
-      {
-        "v": "D",
-        "map": "DOWN"
-      },
-      {
-        "v": "U",
-        "map": "UP"
-      },
-      {
-        "v": "UP",
-        "map": "UP"
-      },
-      {
         "v": "T",
-        "map": "TAKE"
+        "map": "TALK"
       },
       {
-        "v": "TAKE",
-        "map": "TAKE"
+        "v": "TALK",
+        "map": "TALK"
+      },
+      {
+        "v":"F",
+        "map": "FORWARD"
+      },
+      {
+        "v":"forward",
+        "map": "FORWARD"
+      },
+      {
+        "v":"LIE",
+        "map": "lie"
+      },
+      {
+        "v":"INTIMIDATE",
+        "map": "INTIMIDATE"
+      },
+      {
+        "v":"PERSUADE",
+        "map": "PERSUADE"
+      },
+      {
+        "v":"L",
+        "map": "LIE"
+      },
+      {
+        "v":"I",
+        "map": "INTIMIDATE"
+      },
+      {
+        "v":"P",
+        "map": "PERSUADE"
+      },
+      {
+        "v": "BACK",
+        "map": "BACK"
+      },
+      {
+        "v": "B",
+        "map": "BACK"
+      },
+      {
+        "v":"WHY",
+        "map": "WHY"
+      },
+      {
+        "v":"W",
+        "map": "WHY"
+      },
+      {
+        "v": "REFUSE",
+        "map": "REFUSE"
+      },
+      {
+        "v": "R",
+        "map": "REFUSE"
+      },
+      {
+        "v": "HELP",
+        "map": "HELP"
+      },
+      {
+        "v": "H",
+        "map": "HELP"
       }
+
+
     ],
     "rooms": {
-      "MARIE": {
-        "name": "You are walking around the central pavillion of Wonder World, trying to find an exit.",
-        "desc": "The gates where you came in the park are nowhere in sight, something is seems off as no one else is outside walking around. You decide to find where everyone went\r\nand you see a Nun locking up gates that go inward toward more of the rides. You approach the gates and she calls out\r\r\r\nYou should leave we don't have anymore room for anyone else, unless you have a skill we can use you best take your chances outside the park.",
+      "START": {
+        "name": "Welcome to Wonder World.",
+        "desc": "You've just woken up in the central pavillion of Wonder World. You feel very confused, you don't remember how you got here, but now that you are here, you decide to look around.",
         "exits": [
           {
             "verb": "FORWARD",
+            "target": "MARIE",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "MARIE": {
+        "name": "You are talking to Marie.",
+        "desc": "You are walking around the central pavillion of Wonder World, trying to find an exit. The gates where you came in the park are nowhere in sight, something is seems off as no one\nelse is outside walking around. You decide to find where everyone went and you see a Nun locking up gates that go inward toward more of the rides. You approach the gates and\nshe calls out\r\r\r\n\n'You should leave! we don't have anymore room for anyone else, unless you have a skill we can use, you best take your chances outside the park.'\n",
+        "exits": [
+          {
+            "verb": "TALK",
+            "target": "MARIE2",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "MARIE2": {
+        "name": "You are talking to Marie.",
+        "desc": "You can: \nLie: 'I am a doctor! I can help anyone inside that is injured.' \nIntimidate: 'You think that this gate is going to stop me from getting in?!'\nPersuade: 'Look, I am trying to figure out what is happening. Trust me, I wont be staying long.'",
+        "exits": [
+          {
+            "verb": "LIE",
             "target": "JIM",
             "condition": ""
           },
           {
-            "verb": "",
-            "target": "SBUILD",
+            "verb": "INTIMIDATE",
+            "target": "JIM",
             "condition": ""
           },
           {
-            "verb": "",
-            "target": "GAS",
-            "condition": ""
-          },
-          {
-            "verb": "",
-            "target": "EBUILD",
+            "verb": "PERSUADE",
+            "target": "JIM",
             "condition": ""
           }
         ],
         "inventory": []
       },
       "JIM": {
-        "name": "You are walking from the gates deeper into the park",
-        "desc": "You see all of the rollercoasters have stopped and the sky is an even brighter orange color. You look further down the path you are on to see man seemlingly looting the gift shops in the park.\r\n You try to pass by him w/o him noticing as he looks quite strange but he turns around and says:\r\r\r\nWould you mind giving me a hand? Were not going to have much time before it's not safe up here.",
+        "name": "You are talking to Jim.",
+        "desc": "Walking further from the gates, deeper into the park you see all of the rollercoasters have stopped and the sky is an even brighter orange color. You look further down the \npath you are on to see man seemingly looting the gift shops in the park. You try to pass by him without him noticing as he looks quite strange but he turns around and says:\r\r\r\n'Would you mind giving me a hand? Were not going to have much time before it's not safe up here.'",
+        "exits": [
+          {
+            "verb": "TALK",
+            "target": "JIM2",
+            "condition": ""
+          },
+          {
+            "verb": "BACK",
+            "target": "MARIE",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "JIM2": {
+        "name": "You are talking to Jim.",
+        "desc": "You can: \nAsk why: 'Why are we running out of time? What happened?'\nRun back to Marie \nHelp him: 'Sure, i'll help. What do you want me to do?' \nRefuse to help: 'No, I am not going to help you. Just let me by!'",
+        "exits": [
+          {
+            "verb": "WHY",
+            "target": "JIM3",
+            "condition": ""
+          },
+          {
+            "verb": "BACK",
+            "target": "MARIE",
+            "condition": ""
+          },
+          {
+            "verb": "HELP",
+            "target": "JIM4",
+            "condition": ""
+          },
+          {
+            "verb": "REFUSE",
+            "target": "LOSE",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "JIM3": {
+        "name": "You are talking to Jim.",
+        "desc": "Jim responds by telling you 'The day of reckoning is upon us, son. We must prepare for the worst!'",
+        "exits": [
+          {
+            "verb": "TALK",
+            "target": "JIM2",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "JIM4": {
+        "name": "You are talking to Jim.",
+        "desc": "You help Jim loot for some survival items. He thanks you, and tells you that you can go further into the park now.",
         "exits": [
           {
             "verb": "FORWARD",
             "target": "VICKIE",
-            "condition": ""
-          },
-          {
-            "verb": "",
-            "target": "WBUILD",
-            "condition": ""
-          },
-          {
-            "verb": "",
-            "target": "SBUILD",
-            "condition": ""
-          },
-          {
-            "verb": "",
-            "target": "EBUILD",
             "condition": ""
           }
         ],
         "inventory": []
       },
       "VICKIE": {
-        "name": "You continue down the path toward the back of park.",
+        "name": "You are talking to Vickie.",
         "desc": "Making your way toward the ferris wheel you see a girl outside of it looking to be setting up a garden right outside of the ferris wheel.\r\n She is wearing a name tag so it seems she works at the park or at least used to. You notice that the ferris wheel seems to have some vines and plants growing in it, like it hasn't been started in years. You walk up to the stairs og the ferris wheel when Vickie calls out to you: \r\r\r\n HEY! That attraction is out of order don't even think about starting it up. ",
         "exits": [
           {
             "verb": "FORWARD",
             "target": "MORT",
             "condition": ""
-          },
-          {
-            "verb": "",
-            "target": "BRIDGE",
-            "condition": ""
           }
         ],
         "inventory": []
       },
       "MORT": {
-        "name": "You convince Vickie to let you use the ferris wheel, but she leaves and goes back to the park",
-        "desc": "You realize you need someone to start and stop the machiene for you. Luckily you see a guy lurking on the back of the wheel mumbling to himself. You ask him if he can operate the wheel to he responds:\r\r\r\n What do you think your going to see up there?",
+        "name": "You are talking to Vickie.",
+        "desc": "You convince Vickie to let you use the ferris wheel, but she leaves and goes back to the park. You realize you need someone to start and stop the machiene for you. Luckily you see a guy lurking on the back of the wheel mumbling to himself. You ask him if he can operate the wheel to he responds:\r\r\r\n What do you think your going to see up there?",
         "exits": [
           {
             "verb": "FORWARD",
@@ -160,4 +221,19 @@
           }
         ],
         "inventory": []
+      },
+      "LOSE": {
+        "name": "Because you refused, you cannot progress any more. Please close the game and start again.",
+        "desc": "The End.",
+        "exits": [
+          {
+            "verb": "FORWARD",
+            "target": "WBUILD",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      }
+    }
+}
     

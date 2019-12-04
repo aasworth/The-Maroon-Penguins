@@ -19,11 +19,32 @@ def render(game,current,moves,points):
     c = r[current]
     scale_w = 900/2700
     scale_h = 600/1800
-    if c['name'] == "You are walking around the central pavillion of Wonder World, trying to find an exit.":
+    if c['name'] == "You are talking to Marie.":
         root = Tk()
         canvas = Canvas(root, width = 900, height = 600)
         canvas.pack()
         img = PhotoImage(file="Marie.png")
+        canvas.create_image(20,20, anchor = NW, image=img)
+        mainloop()
+    elif c['name'] == "You are talking to Jim.":
+        root = Tk()
+        canvas = Canvas(root, width = 900, height = 600)
+        canvas.pack()
+        img = PhotoImage(file="Jim.png")
+        canvas.create_image(20,20, anchor = NW, image=img)
+        mainloop()
+    elif c['name'] == "You are talking to Mort.":
+        root = Tk()
+        canvas = Canvas(root, width = 900, height = 600)
+        canvas.pack()
+        img = PhotoImage(file="Mort.png")
+        canvas.create_image(20,20, anchor = NW, image=img)
+        mainloop()
+    elif c['name'] == "You are talking to Vickie.":
+        root = Tk()
+        canvas = Canvas(root, width = 900, height = 600)
+        canvas.pack()
+        img = PhotoImage(file="Vickie.png")
         canvas.create_image(20,20, anchor = NW, image=img)
         mainloop()
     else:
@@ -100,9 +121,9 @@ def main():
     with open(gameFile) as json_file:
         game = json.load(json_file)
 
-    current = 'MARIE'
+    current = 'START'
     win = ['END']
-    lose = []
+    lose = ['LOSE']
     moves = 0
     points = 0
     inventory = []
