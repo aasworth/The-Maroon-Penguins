@@ -26,11 +26,25 @@ def render(game,current,moves,points):
         img = PhotoImage(file="Marie.png")
         canvas.create_image(20,20, anchor = NW, image=img)
         mainloop()
+    elif c['name'] == "Marie":
+        root = Tk()
+        canvas = Canvas(root, width = 900, height = 600)
+        canvas.pack()
+        img = PhotoImage(file="Marie_Talking.png")
+        canvas.create_image(20,20, anchor = NW, image=img)
+        mainloop()
     elif c['name'] == "You are talking to Jim.":
         root = Tk()
         canvas = Canvas(root, width = 900, height = 600)
         canvas.pack()
         img = PhotoImage(file="Jim.png")
+        canvas.create_image(20,20, anchor = NW, image=img)
+        mainloop()
+    elif c['name'] == "Jim":
+        root = Tk()
+        canvas = Canvas(root, width = 900, height = 600)
+        canvas.pack()
+        img = PhotoImage(file="Jim_Talking.png")
         canvas.create_image(20,20, anchor = NW, image=img)
         mainloop()
     elif c['name'] == "You are talking to Mort.":
@@ -40,11 +54,32 @@ def render(game,current,moves,points):
         img = PhotoImage(file="Mort.png")
         canvas.create_image(20,20, anchor = NW, image=img)
         mainloop()
+    elif c['name'] == "Mort":
+        root = Tk()
+        canvas = Canvas(root, width = 900, height = 600)
+        canvas.pack()
+        img = PhotoImage(file="Mort_Talking.png")
+        canvas.create_image(20,20, anchor = NW, image=img)
+        mainloop()
     elif c['name'] == "You are talking to Vickie.":
         root = Tk()
         canvas = Canvas(root, width = 900, height = 600)
         canvas.pack()
         img = PhotoImage(file="Vickie.png")
+        canvas.create_image(20,20, anchor = NW, image=img)
+        mainloop()
+    elif c['name'] == "Vickie":
+        root = Tk()
+        canvas = Canvas(root, width = 900, height = 600)
+        canvas.pack()
+        img = PhotoImage(file="Vickie_Talking.png")
+        canvas.create_image(20,20, anchor = NW, image=img)
+        mainloop()
+    elif c['name'] == "The outside world.":
+        root = Tk()
+        canvas = Canvas(root, width = 900, height = 600)
+        canvas.pack()
+        img = PhotoImage(file="End.png")
         canvas.create_image(20,20, anchor = NW, image=img)
         mainloop()
     else:
@@ -105,10 +140,8 @@ def normalizeVerb(selection,verbs):
 def end_game(winning,points,moves):
     if winning:
         print('You have won! Congratulations')
-        print('You scored {points} points in {moves} moves! Nicely done!'.format(moves=moves, points=points))
     else:
-        print('Thanks for playing!')
-        print('You scored {points} points in {moves} moves. See you next time!'.format(moves=moves, points=points))
+        print('Thanks for playing! Please try again to find the Win!')
 
 
 
@@ -122,7 +155,7 @@ def main():
         game = json.load(json_file)
 
     current = 'START'
-    win = ['END']
+    win = ['WIN']
     lose = ['LOSE']
     moves = 0
     points = 0
